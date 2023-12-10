@@ -15,4 +15,4 @@ print(f"Uploader upload directory: {upload_dir}")
 
 for fname in os.listdir(input_dir):
   fpath = os.path.join(input_dir, fname)
-  s3_client.upload_file(fpath,os.getenv("AWS_BUCKET", "bucket-test"), f"{upload_dir}/{fname}")
+  s3_client.upload_file(fpath,os.getenv("AWS_BUCKET_NAME", "bucket-test"), f"{upload_dir}/{fname}")
